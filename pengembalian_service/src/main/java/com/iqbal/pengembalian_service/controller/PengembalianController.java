@@ -42,6 +42,4 @@ public class PengembalianController {
         pengembalianService.deletePengembalian(id);
         return ResponseEntity.ok().build();
     }
-
-
 }

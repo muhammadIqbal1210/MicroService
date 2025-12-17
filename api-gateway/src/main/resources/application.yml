@@ -9,18 +9,22 @@ spring:
                 server:
                     webmvc:
                         routes:
-                            - id: product
-                              uri: lb://product-service
+                            - id: anggota
+                              uri: lb://anggota-service
                               predicates: 
-                                - Path=api/products/**
-                            - id: customer
-                              uri: lb://customer-service
+                                - Path=api/anggota/**
+                            - id: buku
+                              uri: lb://buku-service
                               predicates: 
-                                - Path=api/customers/**
-                            - id: order
-                              uri: lb://order-service
+                                - Path=api/buku/**
+                            - id: peminjaman
+                              uri: lb://peminjaman-service
                               predicates: 
-                                - Path=api/orders/**
+                                - Path=api/peminjaman/**
+                            - id: pengembalian
+                              uri: lb://pengembalian-service
+                              predicates: 
+                                - Path=api/pengembalian/**
                     
 eureka:
     client:
